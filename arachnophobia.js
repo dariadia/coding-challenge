@@ -27,6 +27,7 @@ const arachnophobia = (legSize, bodySize, mouth, eye) => {
       + BODY_SIZES[bodySize].split(" ")[0] 
       + Array.from({ length: EYE_COUNT / 2 }, () => eye).join("") 
       + mouth 
+      + Array.from({ length: EYE_COUNT / 2 }, () => eye).join("") 
       + BODY_SIZES[bodySize].split(" ")[1] 
       + LEG_SIZES[legSize].split(" ")[1]
 }
