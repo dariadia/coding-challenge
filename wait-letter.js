@@ -17,4 +17,10 @@ Examples :
 "10a 90x 14b 78u 45a 7b 34y" = 10 + 45 - 14 * 7 / 78 + 90 - 34 = 60
 */
 
-// sort .sort((a, b) => a.replaceAll(/\D*/g, "") - b.replaceAll(/\D*/g, ""))
+const calcByLetters = (string) => {
+    const _sorted = string.split(" ").sort((a, b) => a.replaceAll(/\D*/g, "") - b.replaceAll(/\D*/g, ""))
+    const sorted = string.split(" ").map(item => item.replaceAll(/\D*/g, ""))
+    return sorted[0] + sorted[1] - sorted[2] * sorted[3] / sorted[4]
+}
+
+console.log(calcByLetters("24z6 1x23 y369 89a 900b"))
