@@ -10,3 +10,11 @@ Given are two strings password and password_repeat. Check if the password is sec
 Return true only if all criteria are met, otherwise return false.
 */
 
+function checkPassword(password, password_repeat) {
+  if (password !== password_repeat || password.length < 8) 
+    return false
+  
+  const regExp = /^(?=.*\d)(?=.*[$%_&])(?=.*[a&#8209;z])(?=.*[A&#8209;Z]).{8,}$/;
+
+  return Boolean(password.match(regExp)?.length)
+}
